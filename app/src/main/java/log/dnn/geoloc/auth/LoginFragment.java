@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import log.dnn.geoloc.AuthActivity;
 import log.dnn.geoloc.R;
 
 /**
@@ -48,36 +49,34 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        txtError.setVisibility(TextView.VISIBLE);
         if(isValidated()){
-
+            ((AuthActivity)getActivity()).navHostController.navigate(R.id.action_loginFragment_to_main_nav);
+            getActivity().finish();
         }else{
-            txtError.setVisibility(TextView.VISIBLE);
             txtError.setText(messageError);
         }
     }
 
     private boolean isValidated() {
-        if(txtEmail.getText().length()== 0 && txtPassword.getText().length()==0){
+        if(txtEmail.getText().length()== 0 || txtPassword.getText().length()==0){
             messageError = MessageError.LOGIN_REQUIRED;
-            return true;
+            return false;
         }
-        else {
-            if (isFound(txtEmail.getText().toString(), txtPassword.getText().toString())){
-                messageError = "it is OK";
-                return true;
-            }else{
-                messageError = MessageError.LOGIN_USER_NOT_FOUND;
-                return false;
-            }
-
+        if (!isFound(txtEmail.getText().toString(), txtPassword.getText().toString())){
+            messageError = MessageError.LOGIN_USER_NOT_FOUND;
+            return false;
         }
 
+        return true;
     }
 
     private boolean isFound(String email, String password) {
         for (String[] user:USERS) {
-            if(email == user[0] && password == user[1])
+            if(email.equals(user[0]) && password.equals(user[1])){
                 return true;
+            }
+
         }
         return false;
     }
