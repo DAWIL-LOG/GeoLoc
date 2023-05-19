@@ -3,4 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="finish_onboarding">Get Started</string>
+    <string name="sign_in">Sign in to your account</string>
+    <string name="email">Email address</string>
+    <string name="password">Password</string>
+    <string name="email_placeholder">Email address</string>
+    <string name="Password_placeholder">Password</string>
 </resources>
