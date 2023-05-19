@@ -15,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 
 import log.dnn.geoloc.OnBoardingActivity;
 import log.dnn.geoloc.OnSwipeListener;
@@ -31,13 +33,15 @@ public class FragmentOne extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_on_boarding_one, container, false);
+
+        //Initialize gesture
         view.setOnTouchListener(new OnSwipeListener(getContext()){
             @Override
             public void onSwipeLeft() {
                 ((OnBoardingActivity)getActivity()).navHostController.navigate(R.id.action_fragmentOne_to_fragmentTwo);
             }
         });
-        //Initialize gesture
+
 
         // Inflate the layout for this fragment
         return view;

@@ -18,7 +18,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginEnd="-2dp"
         android:contentDescription="TODO"
-        app:srcCompat="@mipmap/logo_foreground" />
+        app:srcCompat="@mipmap/logo" />
 
     <TextView
         android:id="@+id/textView4"
