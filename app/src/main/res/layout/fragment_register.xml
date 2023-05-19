@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="140dp"
         android:layout_marginTop="37dp"
-        android:background="@mipmap/logo_foreground"
+        android:background="@mipmap/logo"
         android:contentDescription="@string/logo"
         android:textAppearance="@style/logo"
         tools:ignore="ImageContrastCheck" />
@@ -25,7 +25,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="140dp"
         android:layout_marginTop="37dp"
-        android:background="@mipmap/logo_foreground"
+        android:background="@mipmap/logo"
         android:contentDescription="@string/logo"
         android:textAppearance="@style/logo"
         tools:ignore="ImageContrastCheck" />
@@ -36,7 +36,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="140dp"
         android:layout_marginTop="37dp"
-        android:background="@mipmap/logo_foreground"
+        android:background="@mipmap/logo"
         android:contentDescription="@string/logo"
         android:textAppearance="@style/logo"
         tools:ignore="ImageContrastCheck" />
