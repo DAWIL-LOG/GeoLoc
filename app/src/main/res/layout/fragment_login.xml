@@ -12,28 +12,25 @@
         android:layout_height="121dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
-        android:background="@mipmap/logo"
+        android:src="@mipmap/logo"
         android:contentDescription="@string/logo"
-        android:textAppearance="@style/logo"
-        tools:ignore="ImageContrastCheck" />
+        android:textAppearance="@style/logo" />
     <ImageView
         android:layout_width="118dp"
         android:layout_height="121dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
-        android:background="@mipmap/logo"
+        android:src="@mipmap/logo"
         android:contentDescription="@string/logo"
-        android:textAppearance="@style/logo"
-        tools:ignore="ImageContrastCheck" />
+        android:textAppearance="@style/logo" />
     <ImageView
         android:layout_width="118dp"
         android:layout_height="121dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
-        android:background="@mipmap/logo"
+        android:src="@mipmap/logo"
         android:contentDescription="@string/logo"
-        android:textAppearance="@style/logo"
-        tools:ignore="ImageContrastCheck" />
+        android:textAppearance="@style/logo" />
 
     <View
         android:id="@+id/form_contain"
@@ -137,7 +134,7 @@
         android:text="@string/forgot"
         android:textColor="#02BAF4"
         android:textSize="16sp"
-        tools:ignore="TextSizeCheck" 
+        tools:ignore="TextSizeCheck"
         />
 
     <CheckBox

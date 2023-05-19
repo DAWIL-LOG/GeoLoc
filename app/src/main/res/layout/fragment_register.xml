@@ -12,7 +12,7 @@
         android:layout_height="121dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
-        android:background="@mipmap/logo"
+        android:src="@mipmap/logo"
         android:contentDescription="@string/logo"
         android:textAppearance="@style/logo"
         tools:ignore="ImageContrastCheck" />
@@ -21,7 +21,7 @@
         android:layout_height="121dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
-        android:background="@mipmap/logo"
+        android:src="@mipmap/logo"
         android:contentDescription="@string/logo"
         android:textAppearance="@style/logo"
         tools:ignore="ImageContrastCheck" />
@@ -30,7 +30,7 @@
         android:layout_height="121dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
-        android:background="@mipmap/logo"
+        android:src="@mipmap/logo"
         android:contentDescription="@string/logo"
         android:textAppearance="@style/logo"
         tools:ignore="ImageContrastCheck" />
