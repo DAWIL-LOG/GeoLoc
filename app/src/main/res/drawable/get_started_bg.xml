@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="323dp"
-        android:height="85dp"
-        android:viewportWidth="323"
-        android:viewportHeight="85"
->
-    <group>
-        <clip-path
-                android:pathData="M15 0H308C316.284 0 323 6.71573 323 15V70C323 78.2843 316.284 85 308 85H15C6.71573 85 0 78.2843 0 70V15C0 6.71573 6.71573 0 15 0Z"
+<layer-list android:opacity="opaque" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="start"
+        android:right="14dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#02BAF4"/>
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+    <item android:width="30dp"
+            android:height="30dp"
+        android:gravity="end|center">
+        <shape android:shape="oval">
+            <stroke android:width="2dp"
+                android:color="#FFFFFF" />
+            <solid android:color="#02BAF4"/>
+        </shape>
+    </item>
+    <item android:width="30dp"
+        android:height="30dp"
+        android:gravity="end|center"
+        android:drawable="@drawable/logo_forward_foreground"
         />
-        <path
-                android:pathData="M0 0V85H323V0"
-                android:fillColor="#1BBCE6"
-        />
-    </group>
-</vector>
+</layer-list>
+

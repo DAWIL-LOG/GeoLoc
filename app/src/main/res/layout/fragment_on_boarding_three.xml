@@ -11,40 +11,20 @@
             android:id="@+id/logo_text_3"
             android:layout_width="333dp"
             android:layout_height="101dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="48dp"
+            android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="52dp"
             android:background="@drawable/logo_text"
     />
 
-    <View
-            android:id="@+id/onboarding_fond"
-            android:layout_width="435dp"
-            android:layout_height="510dp"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/onboarding_bg"
-            android:layout_alignParentBottom="true"
-    />
 
     <View
-            android:id="@+id/rectangle_7"
-            android:layout_width="323dp"
-            android:layout_height="85dp"
-            android:layout_marginLeft="38dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="571dp"
-            android:background="@drawable/get_started_bg"
-    />
-    <View
-            android:id="@+id/ellipse_3"
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:layout_marginLeft="343dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="597dp"
-            android:background="@drawable/ellipse_bg"
-    />
+        android:id="@+id/onboarding_fond"
+        android:layout_width="match_parent"
+        android:layout_height="632dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-1dp"
+        android:background="@drawable/onboarding_bg" />
 
     <ImageView android:id="@+id/onboarding1"
                android:layout_width="301dp"
@@ -54,5 +34,17 @@
                android:layout_marginTop="127dp"
                android:background="@drawable/onboarding3"
     />
+
+    <Button
+        android:id="@+id/btnendonboarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/get_started_bg"
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="100dp"
+        android:textAlignment="center"
+        android:text="@string/finish_onboarding" />
 
 </RelativeLayout>
