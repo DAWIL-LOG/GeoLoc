@@ -18,4 +18,6 @@
     <string name="username">Username</string>
     <string name="name_place">Username</string>
     <string name="erreur_message">erreur message</string>
+    <string name="award">Award</string>
+    <string name="forward">Forward</string>
 </resources>
