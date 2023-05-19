@@ -28,7 +28,7 @@
             android:background="@color/bg_color"
             android:layout_weight="10"
             android:src="@drawable/forward_direction"
-            android:contentDescription="Forward" />
+            android:contentDescription="@string/forward" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="10"
             android:src="@drawable/award_direction"
-            android:contentDescription="Award"/>
+            android:contentDescription="@string/award"/>
     </LinearLayout>
 
     <TextView
