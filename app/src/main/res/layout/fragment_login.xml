@@ -127,19 +127,18 @@
 
     <TextView
         android:id="@+id/forgot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="131dp"
+        android:layout_height="22dp"
         android:layout_below="@+id/password_placeholder"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="246dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="37dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="32dp"
+        android:layout_toEndOf="@+id/checkBox"
         android:fontFamily="@font/nunito"
         android:text="@string/forgot"
         android:textColor="#02BAF4"
         android:textSize="16sp"
-        tools:ignore="TextSizeCheck" />
+        tools:ignore="TextSizeCheck" 
+        />
 
     <CheckBox
         android:id="@+id/checkBox"
