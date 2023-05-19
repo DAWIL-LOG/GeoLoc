@@ -9,8 +9,13 @@
     <string name="email_place">Email address</string>
     <string name="Password_place">Password</string>
     <string name="logo">logo</string>
-    <string name="login_message">Don\u00E2\u0080\u0099t have an account? Sign up</string>
+    <string name="login_message">Don\'t have an account? Sign up</string>
     <string name="forgot">Forgot password?</string>
     <string name="CheckBox">Remember me</string>
     <string name="sign_in_button">Sign in</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_for_free">Sign up for free</string>
+    <string name="username">Username</string>
+    <string name="name_place">Username</string>
+    <string name="erreur_message">erreur message</string>
 </resources>
