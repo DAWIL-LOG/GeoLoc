@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="logo_forward_background">#1BBCE6</color>
+    <color name="forward_direction">#001820</color>
 </resources>

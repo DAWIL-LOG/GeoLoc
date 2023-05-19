@@ -19,7 +19,7 @@
     <item android:width="30dp"
         android:height="30dp"
         android:gravity="end|center"
-        android:drawable="@drawable/logo_forward_foreground"
+        android:drawable="@drawable/forward_direction"
         />
 </layer-list>
 
