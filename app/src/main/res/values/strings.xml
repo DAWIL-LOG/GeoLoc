@@ -20,4 +20,6 @@
     <string name="erreur_message">erreur message</string>
     <string name="award">Award</string>
     <string name="forward">Forward</string>
+    <string name="text_onboard3">Nous produisons pour vous un recapitulatif de tous les trajets effectués par votre vehicule</string>
+    <string name="get">Get Started</string>
 </resources>
