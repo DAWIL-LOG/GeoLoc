@@ -3,15 +3,220 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".auth.RegisterFragment">
+    tools:context=".auth.RegisterFragment"
+    android:background="@drawable/bg_app">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="118dp"
+        android:layout_height="121dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="37dp"
+        android:background="@mipmap/logo_foreground"
+        android:contentDescription="@string/logo"
+        android:textAppearance="@style/logo"
+        tools:ignore="ImageContrastCheck" />
+    <ImageView
+        android:layout_width="118dp"
+        android:layout_height="121dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="37dp"
+        android:background="@mipmap/logo_foreground"
+        android:contentDescription="@string/logo"
+        android:textAppearance="@style/logo"
+        tools:ignore="ImageContrastCheck" />
+    <ImageView
+        android:layout_width="118dp"
+        android:layout_height="121dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="37dp"
+        android:background="@mipmap/logo_foreground"
+        android:contentDescription="@string/logo"
+        android:textAppearance="@style/logo"
+        tools:ignore="ImageContrastCheck" />
+
+    <View
+        android:id="@+id/form_contain"
+        android:layout_width="match_parent"
+        android:layout_height="665dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-7dp"
+        android:background="@drawable/onboarding_bg"
+        android:gravity="center"
+        tools:ignore="VisualLintBounds" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/sign_in"
+        android:layout_width="288dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/form_contain"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="62dp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal|top"
+        android:text="@string/sign_up_for_free"
+        android:textAppearance="@style/sign_in"
+        android:textColor="#1BBCE6"
+        android:textSize="25sp"
+        tools:ignore="TextSizeCheck" />
+    <TextView
+        android:id="@+id/error_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/sign_in"
         android:layout_centerHorizontal="true"
-        android:textSize="100px"
-        android:text="Register" />
+        android:layout_marginTop="13dp"
+        android:text="@string/erreur_message"
+        android:textColor="#EE6F6F" />
+
+    <TextView
+        android:id="@+id/username_text"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_below="@+id/sign_in"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal|top"
+        android:text="@string/username"
+        android:textAppearance="@style/label"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/name_placeholder"
+        android:layout_width="355dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/username_text"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:autofillHints=""
+        android:background="@drawable/input_bg"
+        android:fontFamily="@font/nunito"
+        android:gravity="start|center"
+        android:hint="@string/name_place"
+        android:inputType="textEmailAddress"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:textColor="#8A7B7B"
+        android:textColorHint="#78909C"
+        tools:ignore="DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_below="@+id/name_placeholder"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal|top"
+        android:text="@string/email"
+        android:textAppearance="@style/label"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/email_placeholder"
+        android:layout_width="355dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/email"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:autofillHints=""
+        android:background="@drawable/input_bg"
+        android:fontFamily="@font/nunito"
+        android:gravity="start|center"
+        android:hint="@string/email_place"
+        android:inputType="textEmailAddress"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:textColor="#8A7B7B"
+        android:textColorHint="#78909C"
+        tools:ignore="DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="73dp"
+        android:layout_height="22dp"
+        android:layout_below="@+id/email_placeholder"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal|top"
+        android:text="@string/password"
+        android:textAppearance="@style/label"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/password_placeholder"
+        android:layout_width="355dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/password"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:autofillHints=""
+        android:background="@drawable/input_bg"
+        android:fontFamily="@font/nunito"
+        android:gravity="start|center"
+        android:hint="@string/Password_place"
+        android:inputType="textPassword"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:textColor="#8A7B7B"
+        android:textColorHint="#78909C"
+        tools:ignore="DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_placeholder"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="55dp"
+        android:background="@drawable/button_bg"
+        android:text="@string/sign_up"
+        android:textColor="#fff"
+        tools:ignore="VisualLintButtonSize" />
+
+    <TextView
+        android:id="@+id/login_message"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="85dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/login_message"
+        tools:ignore="TextSizeCheck" />
+
 
 </RelativeLayout>
