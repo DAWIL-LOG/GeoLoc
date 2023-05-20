@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.LayoutInflater;
@@ -158,4 +159,5 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
 
         return true;
     }
+
 }
