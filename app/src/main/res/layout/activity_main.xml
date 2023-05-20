@@ -15,20 +15,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
-        android:layout_weight="70"
+        android:layout_weight="80"
         app:navGraph="@navigation/main_nav" />
 
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_weight="30"
         app:menu="@menu/bottom_navigation"
         android:background="@color/bg_color"
         app:labelVisibilityMode="labeled"
         app:itemIconTint="#fff"
         app:itemTextColor="#02BAF4"
+        android:layout_weight="20"
         />
 </LinearLayout>
