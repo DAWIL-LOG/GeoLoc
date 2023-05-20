@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="@string/home"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/house"/>
+
+    <item
+        android:id="@+id/nav_story"
+        android:title="@string/historique"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/adjustments_horizontal"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:title="@string/profile"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/user"/>
+
+    <item
+        android:id="@+id/nav_add_car"
+        android:title="@string/car"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/add_car"/>
+
+
+</menu>
