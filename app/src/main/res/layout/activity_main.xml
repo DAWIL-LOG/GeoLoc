@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/main_nav"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/main_nav" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="780dp">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/main_nav"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/main_nav" />
+    </RelativeLayout>
 
-    <com.google.android.material.bottomappbar.BottomAppBar
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/white"
-        android:id="@+id/bottomAppBar"
-        app:fabCradleRoundedCornerRadius="50dp"
-        app:fabCradleMargin="10dp"
-        >
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:menu="@menu/bottom_navigation"
-            android:background="@android:color/transparent"
-            android:layout_marginRight="20dp"
-            app:labelVisibilityMode="labeled"
-            app:itemIconTint="#02BAF4"
-            app:itemTextColor="#02BAF4"
-            />
-    </com.google.android.material.bottomappbar.BottomAppBar>
-</RelativeLayout>
+        app:menu="@menu/bottom_navigation"
+        android:background="@android:color/transparent"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#02BAF4"
+        app:itemTextAppearanceActive="#02BAF4"
+        app:itemTextAppearanceInactive="#FFF"
+        />
+</LinearLayout>
