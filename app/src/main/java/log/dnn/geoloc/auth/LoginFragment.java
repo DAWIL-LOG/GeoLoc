@@ -25,7 +25,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     private EditText txtEmail;
     private EditText txtPassword;
-    private Button btnSignIn;
+    private Button btnSignIn, btnSignUp;
     private TextView txtError;
     private String messageError;
 
@@ -37,12 +37,20 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
-        txtEmail = view.findViewById(R.id.txt_email);
+        txtEmail = view.findViewById(R.id.ltxt_email);
         txtPassword = view.findViewById(R.id.txt_password);
         btnSignIn = view.findViewById(R.id.btn_signin);
+        btnSignUp = view.findViewById(R.id.btn_signup);
         txtError = view.findViewById(R.id.txt_error);
 
         btnSignIn.setOnClickListener(this);
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((AuthActivity)getActivity()).navHostController.navigate(R.id.action_loginFragment_to_registerFragment);
+            }
+        });
 
         return view;
     }

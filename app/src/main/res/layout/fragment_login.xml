@@ -88,11 +88,11 @@
             android:textAppearance="@style/label"
             android:textColor="#fff"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_email"
+            app:layout_constraintBottom_toTopOf="@+id/ltxt_email"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <EditText
-            android:id="@+id/txt_email"
+            android:id="@+id/ltxt_email"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="16dp"
@@ -200,6 +200,7 @@
                 android:textAlignment="center" />
 
             <Button
+                android:id="@+id/btn_signup"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="40"
