@@ -21,7 +21,9 @@
     <string name="erreur_message">erreur message</string>
     <string name="award">Award</string>
     <string name="forward">Forward</string>
-    <string name="text_onboard3">Nous produisons pour vous un recapitulatif de tous les trajets effectués par votre vehicule</string>
+    <string name="text_onboard3">Nous produisons pour vous un recapitulatif de tous les trajets effectués par votre véhicule</string>
+    <string name="text_onboard1">Ayez en temps et en heure tous les trajets effectués par votre véhicule</string>
+    <string name="text_onboard2">Obtenez en un seul clique la localisation en temps réelle de votre véhicule</string>
     <string name="get">Get Started</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -33,4 +35,8 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="register_message">Have you an account ?</string>
+    <string name="car">Car</string>
+    <string name="profile">Profile</string>
+    <string name="historique">Historique</string>
+    <string name="home">Home</string>
 </resources>

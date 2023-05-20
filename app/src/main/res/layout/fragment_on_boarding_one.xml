@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="145dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginBottom="100dp"
             android:layout_weight="500"
             android:fontFamily="@font/montserrat"
             android:padding="25dp"
