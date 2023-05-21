@@ -81,7 +81,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="@string/erreur_message"
             android:textColor="#EE6F6F"
             android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/username"

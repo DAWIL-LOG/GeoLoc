@@ -1,4 +1,4 @@
-package log.dnn.geoloc;
+package log.dnn.geoloc.uiclasses;
 
 import android.content.Context;
 import android.view.GestureDetector;

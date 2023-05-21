@@ -2,24 +2,14 @@ package log.dnn.geoloc.onboarding;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentContainerView;
-import androidx.navigation.NavGraph;
-import androidx.navigation.NavHostController;
-import androidx.navigation.fragment.NavHostFragment;
 
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
 
 import log.dnn.geoloc.OnBoardingActivity;
-import log.dnn.geoloc.OnSwipeListener;
+import log.dnn.geoloc.uiclasses.OnSwipeListener;
 import log.dnn.geoloc.R;
 
 /**

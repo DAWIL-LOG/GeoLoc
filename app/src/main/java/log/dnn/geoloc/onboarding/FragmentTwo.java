@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import log.dnn.geoloc.OnBoardingActivity;
-import log.dnn.geoloc.OnSwipeListener;
+import log.dnn.geoloc.uiclasses.OnSwipeListener;
 import log.dnn.geoloc.R;
 
 /**

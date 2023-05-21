@@ -30,6 +30,7 @@ import java.util.regex.Pattern;
 import log.dnn.geoloc.AuthActivity;
 import log.dnn.geoloc.R;
 import log.dnn.geoloc.models.User;
+import log.dnn.geoloc.uiclasses.LoadingDialog;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -86,7 +87,8 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
         password = txtPassword.getText().toString();
 
         if (isValidated(username,email,password)){
-
+            LoadingDialog loading = new LoadingDialog(RegisterFragment.this);
+            loading.startLoading();
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
@@ -100,15 +102,18 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                                 .setValue(user).addOnCompleteListener(task1 -> {
                                                     if(task1.isSuccessful()){
+                                                        loading.dismiss();
                                                         Toast.makeText(getActivity(), R.string.auth_success
                                                                 , Toast.LENGTH_SHORT).show();
                                                         ((AuthActivity)getActivity()).navHostController
                                                                 .navigate(R.id.action_registerFragment_to_loginFragment);
                                                     }else{
+                                                        loading.dismiss();
                                                         Toast.makeText(getContext(), R.string.auth_failed, Toast.LENGTH_SHORT).show();
                                                     }
                                                 });
                             } else {
+                                loading.dismiss();
                                 // If sign in fails, display a message to the user
                                 Toast.makeText(getActivity(), R.string.auth_failed, Toast.LENGTH_SHORT).show();
                             }

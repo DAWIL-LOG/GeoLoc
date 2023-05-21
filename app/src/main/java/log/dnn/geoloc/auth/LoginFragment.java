@@ -1,12 +1,14 @@
 package log.dnn.geoloc.auth;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +30,7 @@ import log.dnn.geoloc.AuthActivity;
 import log.dnn.geoloc.MainActivity;
 import log.dnn.geoloc.R;
 import log.dnn.geoloc.SplashScreenActivity;
+import log.dnn.geoloc.uiclasses.LoadingDialog;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -48,11 +51,24 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            //Intent intent= new Intent(AuthActivity.this, MainActivity.class);
-            //startActivity(intent);
 
-            //getActivity().finish();
+        LoadingDialog loading = new LoadingDialog(this);
+        loading.startLoading();
+
+        if(currentUser != null){
+            Intent intent= new Intent(getActivity(), MainActivity.class);
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    loading.dismiss();
+                    startActivity(intent);
+                    getActivity().finish();
+
+                }
+            }, 3000);
+        }else{
+            loading.dismiss();
         }
     }
 
@@ -92,19 +108,31 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         String email = txtEmail.getText().toString();
         String password = txtPassword.getText().toString();
 
-
         txtError.setVisibility(TextView.VISIBLE);
+
         if(isValidated()){
+            LoadingDialog loading = new LoadingDialog(LoginFragment.this);
+            loading.startLoading();
             mAuth.signInWithEmailAndPassword(email, password)
+
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+
                             if (task.isSuccessful()) {
+
+
                                 // Sign in success, update UI with the signed-in user's information
-                                //FirebaseUser user = mAuth.getCurrentUser();
+                                FirebaseUser user = mAuth.getCurrentUser();
                                 Intent intent= new Intent(getActivity(), MainActivity.class);
+                                intent.putExtra("userConnected", user);
                                 startActivity(intent);
+
+                                loading.dismiss();
+
+                                getActivity().finish();
                             } else {
+                                loading.dismiss();
                                 // If sign in fails, display a message to the user.
                                 txtError.setText(MessageError.LOGIN_USER_NOT_FOUND);
                                 Toast.makeText(getContext(), R.string.auth_failed,Toast.LENGTH_SHORT).show();
