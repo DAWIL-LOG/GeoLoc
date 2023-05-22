@@ -41,4 +41,11 @@
     <string name="profile">Profile</string>
     <string name="historique">Historique</string>
     <string name="home">Home</string>
+    <string name="address">Address</string>
+    <string name="add_information">Add Information</string>
+    <string name="douala_yassa_cameroun">Douala, Yassa Cameroun</string>
+    <string name="casa_face_lgm">Casa Face LGM</string>
+    <string name="mobile">Mobile</string>
+    <string name="_237_659_38_96_49">+237 659 38 96 49</string>
+    <string name="geoloc237_gmail_com">geoloc237@gmail.com</string>
 </resources>
